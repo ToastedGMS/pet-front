@@ -31,4 +31,15 @@ describe('Layout Component', () => {
 	it('navigation list is not empty', () => {
 		expect(screen.getByRole('navigation')).not.toBeEmptyDOMElement();
 	});
+	it('renders a footer', () => {
+		expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+	});
+	it('footer element is not empty', () => {
+		expect(screen.getByRole('contentinfo')).not.toBeEmptyDOMElement();
+	});
+	it('footer contains a copyright notice', () => {
+		expect(screen.getByRole('contentinfo')).toHaveTextContent(
+			`© ${new Date().getFullYear()} PetLove. All rights reserved.`
+		);
+	});
 });

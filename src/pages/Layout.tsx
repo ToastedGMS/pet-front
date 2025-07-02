@@ -31,7 +31,7 @@ export default function Layout(): JSX.Element {
 					</ul>
 				</div>
 				<nav>
-					<ul className="flex gap-4 text-2xl font-bold w-full justify-between px-56 py-2 text-white">
+					<ul className="flex gap-4 text-xl font-bold w-full justify-between px-56 py-2 text-white">
 						<NavLink label="Dogs" />
 						<NavLink label="Cats" />
 						<NavLink label="Birds" />
@@ -41,6 +41,13 @@ export default function Layout(): JSX.Element {
 				</nav>
 			</header>
 			<Outlet />
+			<footer>
+				<div className="w-full bg-ocean text-white text-center py-4">
+					<p className="text-sm">
+						&copy; {new Date().getFullYear()} PetLove. All rights reserved.
+					</p>
+				</div>
+			</footer>
 		</>
 	);
 }
