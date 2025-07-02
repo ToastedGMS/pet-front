@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				ocean: '#1F6D77',
+				darkOcean: '#185a62',
 			},
 		},
 	},
