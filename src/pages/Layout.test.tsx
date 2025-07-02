@@ -23,4 +23,12 @@ describe('Layout Component', () => {
 			screen.getByTestId('icon-list')
 		);
 	});
+	it('header contains a navigation list', () => {
+		expect(screen.getByRole('banner')).toContainElement(
+			screen.getByRole('navigation')
+		);
+	});
+	it('navigation list is not empty', () => {
+		expect(screen.getByRole('navigation')).not.toBeEmptyDOMElement();
+	});
 });
