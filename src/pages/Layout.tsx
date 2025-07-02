@@ -32,11 +32,11 @@ export default function Layout(): JSX.Element {
 				</div>
 				<nav>
 					<ul className="flex gap-4 text-xl font-bold w-full justify-between px-56 py-2 text-white">
-						<NavLink label="Dogs" />
-						<NavLink label="Cats" />
-						<NavLink label="Birds" />
-						<NavLink label="Sales" />
-						<NavLink label="Services" />
+						<NavLink label="Dogs" to="/dogs" />
+						<NavLink label="Cats" to="/cats" />
+						<NavLink label="Birds" to="/birds" />
+						<NavLink label="Sales" to="/sales" />
+						<NavLink label="Services" to="/services" />
 					</ul>
 				</nav>
 			</header>
