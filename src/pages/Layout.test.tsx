@@ -1,9 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Layout from './Layout';
 
 describe('Layout Component', () => {
 	beforeEach(() => {
-		render(<Layout />);
+		render(
+			<MemoryRouter>
+				<Layout />
+			</MemoryRouter>
+		);
 	});
 	it('renders a header', () => {
 		expect(screen.getByRole('banner')).toBeInTheDocument();
