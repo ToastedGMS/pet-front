@@ -6,7 +6,7 @@ import NavLink from '../components/NavLink/NavLink';
 export default function Layout(): JSX.Element {
 	return (
 		<>
-			<header className=" w-full mt-4 px-4 bg-ocean">
+			<header className=" w-full px-4 pt-4 bg-ocean shadow-md">
 				<div className="flex items-center justify-between">
 					<img
 						src="logo-transparent.png"
