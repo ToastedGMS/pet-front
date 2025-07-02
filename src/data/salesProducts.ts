@@ -1,6 +1,6 @@
 import type { Product } from '../types/Product';
 
-export const catsProducts: Product[] = [
+export const salesProducts: Product[] = [
 	{
 		id: '1',
 		name: 'Premium Cat Food',

@@ -1,6 +1,6 @@
 import type { Product } from '../types/Product';
 
-export const birdsProducts: Product[] = [
+export const servicesProducts: Product[] = [
 	{
 		id: '1',
 		name: 'Grooming',
