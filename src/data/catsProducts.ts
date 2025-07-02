@@ -1,12 +1,6 @@
-export interface CatProduct {
-	id: string;
-	name: string;
-	description: string;
-	price: number;
-	imageUrl: string;
-}
+import type { Product } from '../types/Product';
 
-export const catsProducts: CatProduct[] = [
+export const catsProducts: Product[] = [
 	{
 		id: '1',
 		name: 'Premium Cat Food',

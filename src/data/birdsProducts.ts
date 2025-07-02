@@ -1,12 +1,6 @@
-export interface BirdProduct {
-	id: string;
-	name: string;
-	description: string;
-	price: number;
-	imageUrl: string;
-}
+import type { Product } from '../types/Product';
 
-export const birdsProducts: BirdProduct[] = [
+export const birdsProducts: Product[] = [
 	{
 		id: '1',
 		name: 'Deluxe Parrot Mix',
