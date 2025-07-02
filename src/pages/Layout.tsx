@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 import { HiLogin, HiOutlineShoppingBag } from 'react-icons/hi';
 import { Outlet } from 'react-router-dom';
-import NavLink from '../components/NavLink';
+import NavLink from '../components/NavLink/NavLink';
 
 export default function Layout(): JSX.Element {
 	return (
