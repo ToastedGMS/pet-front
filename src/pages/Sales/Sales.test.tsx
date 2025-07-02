@@ -14,7 +14,7 @@ describe('Sales Page', () => {
 
 	it('renders the Sales page title', () => {
 		expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(
-			'Products for Sale'
+			'Products on Sale'
 		);
 	});
 	it('renders product cards matching the salesProducts data', () => {
