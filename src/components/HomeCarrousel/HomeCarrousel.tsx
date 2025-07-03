@@ -45,27 +45,41 @@ export default function HomeCarrousel(): JSX.Element {
 	return (
 		<div
 			data-testid="home-carrousel"
-			className="flex justify-center items-center h-max my-4 gap-8 overflow-hidden"
+			className="flex flex-col items-center my-6 w-full max-w-6xl mx-auto px-4"
 		>
-			<img
-				className="w-1/3 opacity-60"
-				src={previousImg.src}
-				alt={previousImg.alt}
-			/>
-			<button
-				className="text-5xl"
-				onClick={() => setIndex((index - 1 + images.length) % images.length)}
-			>
-				<HiChevronLeft />
-			</button>
-			<img className="w-2/3" src={currentImg.src} alt={currentImg.alt} />
-			<button
-				className="text-5xl"
-				onClick={() => setIndex((index + 1) % images.length)}
-			>
-				<HiChevronRight />
-			</button>
-			<img className="w-1/3 opacity-60" src={nextImg.src} alt={nextImg.alt} />
+			<div className="flex items-center justify-center gap-4 w-full">
+				<button
+					className="text-3xl md:text-5xl"
+					onClick={() => setIndex((index - 1 + images.length) % images.length)}
+				>
+					<HiChevronLeft />
+				</button>
+
+				<img
+					className="hidden md:block w-1/4 opacity-60 rounded-lg"
+					src={previousImg.src}
+					alt={previousImg.alt}
+				/>
+
+				<img
+					className="w-3/4 md:w-2/4 rounded-xl"
+					src={currentImg.src}
+					alt={currentImg.alt}
+				/>
+
+				<img
+					className="hidden md:block w-1/4 opacity-60 rounded-lg"
+					src={nextImg.src}
+					alt={nextImg.alt}
+				/>
+
+				<button
+					className="text-3xl md:text-5xl"
+					onClick={() => setIndex((index + 1) % images.length)}
+				>
+					<HiChevronRight />
+				</button>
+			</div>
 		</div>
 	);
 }

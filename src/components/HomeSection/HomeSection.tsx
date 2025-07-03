@@ -29,27 +29,26 @@ export default function HomeSection({
 
 	return (
 		<section
-			className={`flex flex-col md:flex-row items-center gap-8 p-6 my-8 mx-auto w-4/5 rounded-lg shadow-xl ${sectionBgClass}`}
+			className={`flex flex-col md:flex-row items-center gap-6 p-4 sm:p-6 my-8 mx-auto w-4/5 max-w-6xl rounded-lg shadow-xl ${sectionBgClass}`}
 		>
 			{imageSrc && imageAlt && (
 				<img
 					src={imageSrc}
 					alt={imageAlt}
-					className={`w-full md:w-1/2 rounded-lg shadow-md ${
-						isImageLeft ? 'order-1' : 'order-2'
-					}`}
+					className={`w-full md:w-1/2 rounded-lg shadow-md order-1`}
 				/>
 			)}
+
 			<div
-				className={`w-full md:w-1/2 rounded-lg p-6  ${
+				className={`w-full md:w-1/2 rounded-lg p-4 sm:p-6 order-2 md:${
 					isImageLeft ? 'order-2' : 'order-1'
 				} ${textColorClass}`}
 			>
-				<h2 className="text-3xl font-bold mb-4">{title}</h2>
-				<p className="mb-6">{textContent}</p>
+				<h2 className="text-2xl sm:text-3xl font-bold mb-4">{title}</h2>
+				<p className="text-base sm:text-lg mb-6">{textContent}</p>
 				<a
 					href={ctaBtnLink}
-					className={`inline-block px-6 py-2 rounded ${btnBgClass} ${btnTextClass} transition-colors duration-300`}
+					className={`inline-block px-5 py-2 rounded ${btnBgClass} ${btnTextClass} transition-colors duration-300`}
 				>
 					{ctaBtnText}
 				</a>

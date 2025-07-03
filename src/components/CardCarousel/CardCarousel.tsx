@@ -27,27 +27,39 @@ export default function CardCarousel({
 	return (
 		<div
 			data-testid="card-carrousel"
-			className="flex justify-center items-center h-max my-4 gap-8 w-4/5"
+			className="flex flex-col items-center my-6 w-full max-w-6xl mx-auto px-4"
 		>
-			<ProductCard product={previousProduct} variant="small" />
-			<button
-				data-testid="nav-btn"
-				className="text-5xl"
-				onClick={() =>
-					setIndex((index - 1 + productArray.length) % productArray.length)
-				}
-			>
-				<HiChevronLeft />
-			</button>
-			<ProductCard product={currentProduct} />
-			<button
-				data-testid="nav-btn"
-				className="text-5xl"
-				onClick={() => setIndex((index + 1) % productArray.length)}
-			>
-				<HiChevronRight />
-			</button>
-			<ProductCard product={nextProduct} variant="small" />
+			<div className="flex items-center gap-4 w-full justify-center">
+				<button
+					data-testid="nav-btn"
+					className="text-4xl md:text-5xl"
+					onClick={() =>
+						setIndex((index - 1 + productArray.length) % productArray.length)
+					}
+				>
+					<HiChevronLeft />
+				</button>
+
+				<div className="hidden md:block w-1/3">
+					<ProductCard product={previousProduct} variant="small" />
+				</div>
+
+				<div className="w-full md:w-1/3">
+					<ProductCard product={currentProduct} />
+				</div>
+
+				<div className="hidden md:block w-1/3">
+					<ProductCard product={nextProduct} variant="small" />
+				</div>
+
+				<button
+					data-testid="nav-btn"
+					className="text-4xl md:text-5xl"
+					onClick={() => setIndex((index + 1) % productArray.length)}
+				>
+					<HiChevronRight />
+				</button>
+			</div>
 		</div>
 	);
 }
