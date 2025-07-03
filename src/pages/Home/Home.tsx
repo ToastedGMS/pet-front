@@ -3,6 +3,10 @@ import HomeCarrousel from '../../components/HomeCarrousel/HomeCarrousel';
 import HomeSection from '../../components/HomeSection/HomeSection';
 import CardCarousel from '../../components/CardCarousel/CardCarousel';
 import { servicesProducts } from '../../data/servicesProducts';
+import ProductContainer from '../../components/ProductContainer/ProductContainer';
+import { birdsProducts } from '../../data/birdsProducts';
+import { dogsProducts } from '../../data/dogsProducts';
+import { catsProducts } from '../../data/catsProducts';
 
 export default function Home(): JSX.Element {
 	return (
@@ -37,6 +41,18 @@ export default function Home(): JSX.Element {
 				imagePosition="right"
 				theme={2}
 			/>
+			<section>
+				<ProductContainer
+					label="Best Sellers"
+					products={[
+						birdsProducts[0],
+						dogsProducts[3],
+						catsProducts[2],
+						dogsProducts[1],
+						catsProducts[0],
+					]}
+				/>
+			</section>
 		</>
 	);
 }
