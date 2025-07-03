@@ -4,11 +4,22 @@ interface ProductCardProps {
 	product: Product;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+interface ProductCardProps {
+	product: Product;
+	variant?: 'small' | 'normal';
+}
+
+export default function ProductCard({
+	product,
+	variant = 'normal',
+}: ProductCardProps) {
+	const sizeClass =
+		variant === 'small' ? 'scale-90 opacity-60' : 'scale-100 opacity-100';
+
 	return (
 		<div
 			data-testid="product-card"
-			className="flex flex-col justify-between h-full w-full max-w-sm mx-auto text-center border-2 p-4 rounded-lg shadow-lg"
+			className={`flex flex-col justify-between h-full w-full max-w-sm mx-auto text-center border-2 p-4 rounded-lg shadow-lg transition-transform duration-300 ${sizeClass}`}
 		>
 			<img
 				src={product.imageUrl}
