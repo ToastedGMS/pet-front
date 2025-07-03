@@ -14,9 +14,11 @@ export default function ProductContainer(props: ProductContainerProps) {
 					? 'Products on Sale'
 					: props.label === 'Services'
 					? `Services`
+					: props.label === 'Best Sellers'
+					? 'Best Sellers'
 					: `Products for ${props.label}`}
 			</h2>
-			<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:[grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-4 justify-items-center">
 				{props.products.map((product) => (
 					<li key={product.id}>
 						<ProductCard product={product} />
