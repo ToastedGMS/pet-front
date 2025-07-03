@@ -19,4 +19,12 @@ describe('HomeCarrousel', () => {
 		expect(carousel).toContainElement(images[1]);
 		expect(carousel).toContainElement(images[2]);
 	});
+	it('renders the navigation buttons', () => {
+		const carousel = screen.getByTestId('home-carrousel');
+		expect(carousel).toBeInTheDocument();
+		const buttons = screen.getAllByRole('button');
+		expect(buttons).toHaveLength(2);
+		expect(carousel).toContainElement(buttons[0]);
+		expect(carousel).toContainElement(buttons[1]);
+	});
 });

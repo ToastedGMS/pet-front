@@ -1,4 +1,5 @@
 import { useEffect, useState, type JSX } from 'react';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 const images = [
 	{
 		src: 'https://placehold.co/600x400?text=banner1',
@@ -47,7 +48,19 @@ export default function HomeCarrousel(): JSX.Element {
 			className="flex justify-center items-center h-max mb-4 gap-8 overflow-hidden"
 		>
 			<img className="w-1/3" src={previousImg.src} alt={previousImg.alt} />
+			<button
+				className="text-5xl"
+				onClick={() => setIndex((index - 1 + images.length) % images.length)}
+			>
+				<HiChevronLeft />
+			</button>
 			<img className="w-2/3" src={currentImg.src} alt={currentImg.alt} />
+			<button
+				className="text-5xl"
+				onClick={() => setIndex((index + 1) % images.length)}
+			>
+				<HiChevronRight />
+			</button>
 			<img className="w-1/3" src={nextImg.src} alt={nextImg.alt} />
 		</div>
 	);
