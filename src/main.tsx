@@ -9,20 +9,23 @@ import Birds from './pages/Birds/Birds.tsx';
 import Sales from './pages/Sales/Sales.tsx';
 import Services from './pages/Services/Services.tsx';
 import Home from './pages/Home/Home.tsx';
+import { CartProvider } from './context/CartContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
-	<BrowserRouter>
-		<StrictMode>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
-					<Route path="/dogs" element={<Dogs />} />
-					<Route path="/cats" element={<Cats />} />
-					<Route path="/birds" element={<Birds />} />
-					<Route path="/sales" element={<Sales />} />
-					<Route path="/services" element={<Services />} />
-				</Route>
-			</Routes>
-		</StrictMode>
-	</BrowserRouter>
+	<CartProvider>
+		<BrowserRouter>
+			<StrictMode>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<Home />} />
+						<Route path="/dogs" element={<Dogs />} />
+						<Route path="/cats" element={<Cats />} />
+						<Route path="/birds" element={<Birds />} />
+						<Route path="/sales" element={<Sales />} />
+						<Route path="/services" element={<Services />} />
+					</Route>
+				</Routes>
+			</StrictMode>
+		</BrowserRouter>
+	</CartProvider>
 );
