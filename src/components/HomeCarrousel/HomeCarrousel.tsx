@@ -45,7 +45,7 @@ export default function HomeCarrousel(): JSX.Element {
 	return (
 		<div
 			data-testid="home-carrousel"
-			className="flex justify-center items-center h-max mb-4 gap-8 overflow-hidden"
+			className="flex justify-center items-center h-max my-4 gap-8 overflow-hidden"
 		>
 			<img className="w-1/3" src={previousImg.src} alt={previousImg.alt} />
 			<button
