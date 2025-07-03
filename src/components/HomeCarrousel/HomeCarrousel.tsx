@@ -47,7 +47,11 @@ export default function HomeCarrousel(): JSX.Element {
 			data-testid="home-carrousel"
 			className="flex justify-center items-center h-max my-4 gap-8 overflow-hidden"
 		>
-			<img className="w-1/3" src={previousImg.src} alt={previousImg.alt} />
+			<img
+				className="w-1/3 opacity-60"
+				src={previousImg.src}
+				alt={previousImg.alt}
+			/>
 			<button
 				className="text-5xl"
 				onClick={() => setIndex((index - 1 + images.length) % images.length)}
@@ -61,7 +65,7 @@ export default function HomeCarrousel(): JSX.Element {
 			>
 				<HiChevronRight />
 			</button>
-			<img className="w-1/3" src={nextImg.src} alt={nextImg.alt} />
+			<img className="w-1/3 opacity-60" src={nextImg.src} alt={nextImg.alt} />
 		</div>
 	);
 }
