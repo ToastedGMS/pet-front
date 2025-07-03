@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import type { Product } from '../../types/Product';
+import { CartContext } from '../../context/CartContext';
 
 interface ProductCardProps {
 	product: Product;
@@ -15,7 +17,7 @@ export default function ProductCard({
 }: ProductCardProps) {
 	const sizeClass =
 		variant === 'small' ? 'scale-90 opacity-60' : 'scale-100 opacity-100';
-
+	const { addItem } = useContext(CartContext);
 	return (
 		<div
 			data-testid="product-card"
@@ -29,7 +31,10 @@ export default function ProductCard({
 			<h3 className="font-extrabold text-xl">{product.name}</h3>
 			<p className="text-sm">{product.description}</p>
 			<p className="font-extrabold">${product.price.toFixed(2)}</p>
-			<button className="mt-2 bg-ocean text-white py-1 px-4 rounded-lg hover:bg-darkOcean transition-colors duration-300">
+			<button
+				onClick={() => addItem(product)}
+				className="mt-2 bg-ocean text-white py-1 px-4 rounded-lg hover:bg-darkOcean transition-colors duration-300"
+			>
 				Add to cart
 			</button>
 		</div>
