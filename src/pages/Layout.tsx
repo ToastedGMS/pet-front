@@ -1,14 +1,16 @@
 import type { JSX } from 'react';
 import { HiLogin, HiOutlineShoppingCart } from 'react-icons/hi';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import NavLink from '../components/NavLink/NavLink';
 
 export default function Layout(): JSX.Element {
+	const navigate = useNavigate();
 	return (
 		<>
 			<header className=" w-full px-4 pt-4 bg-ocean shadow-md">
 				<div className="flex items-center justify-between">
 					<img
+						onClick={() => navigate('/')}
 						src="logo-transparent.png"
 						alt="PetLove Logo"
 						className="w-40 hover:cursor-pointer"
