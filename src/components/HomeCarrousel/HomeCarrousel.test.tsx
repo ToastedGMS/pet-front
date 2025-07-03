@@ -10,8 +10,13 @@ describe('HomeCarrousel', () => {
 			</MemoryRouter>
 		);
 	});
-	it('renders an image inside the component', () => {
-		const image = screen.getByRole('img');
-		expect(image).toBeInTheDocument();
+	it('renders the image carrousel correctly', () => {
+		const carousel = screen.getByTestId('home-carrousel');
+		expect(carousel).toBeInTheDocument();
+		const images = screen.getAllByRole('img');
+		expect(images).toHaveLength(3);
+		expect(carousel).toContainElement(images[0]);
+		expect(carousel).toContainElement(images[1]);
+		expect(carousel).toContainElement(images[2]);
 	});
 });
