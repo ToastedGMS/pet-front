@@ -2,7 +2,7 @@ import type { Product } from '../types/Product';
 
 export const salesProducts: Product[] = [
 	{
-		id: '1',
+		id: '13',
 		name: 'Premium Cat Food',
 		description:
 			'Nutritious dry food for adult cats. Rich in protein and vitamins.',
@@ -10,7 +10,7 @@ export const salesProducts: Product[] = [
 		imageUrl: 'https://placehold.co/200x200?text=Cat+Food',
 	},
 	{
-		id: '2',
+		id: '14',
 		name: 'Catnip Toy Mouse',
 		description:
 			'Soft plush toy filled with organic catnip for endless playtime.',
@@ -18,14 +18,14 @@ export const salesProducts: Product[] = [
 		imageUrl: 'https://placehold.co/200x200?text=Catnip+Toy+Mouse',
 	},
 	{
-		id: '3',
+		id: '15',
 		name: 'Comfy Cat Bed',
 		description: 'Cozy round bed with removable cover. Perfect for napping.',
 		price: 39.95,
 		imageUrl: 'https://placehold.co/200x200?text=Cat+Bed',
 	},
 	{
-		id: '4',
+		id: '16',
 		name: 'Grooming Brush',
 		description: 'Gentle brush to keep your cat’s fur smooth and shiny.',
 		price: 12.99,
