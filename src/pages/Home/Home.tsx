@@ -1,6 +1,8 @@
 import type { JSX } from 'react';
 import HomeCarrousel from '../../components/HomeCarrousel/HomeCarrousel';
 import HomeSection from '../../components/HomeSection/HomeSection';
+import CardCarousel from '../../components/CardCarousel/CardCarousel';
+import { servicesProducts } from '../../data/servicesProducts';
 
 export default function Home(): JSX.Element {
 	return (
@@ -16,6 +18,15 @@ export default function Home(): JSX.Element {
 				imagePosition="left"
 				theme={1}
 			/>
+			<section className="w-full flex justify-center text-center">
+				<CardCarousel
+					productArray={[
+						servicesProducts[0],
+						servicesProducts[2],
+						servicesProducts[3],
+					]}
+				/>
+			</section>
 			<HomeSection
 				title="Doe Ração"
 				textContent="Ajude a alimentar animais em situação de vulnerabilidade."
