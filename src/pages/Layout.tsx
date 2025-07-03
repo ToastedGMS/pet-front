@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { HiLogin, HiOutlineShoppingBag } from 'react-icons/hi';
+import { HiLogin, HiOutlineShoppingCart } from 'react-icons/hi';
 import { Outlet } from 'react-router-dom';
 import NavLink from '../components/NavLink/NavLink';
 
@@ -26,7 +26,7 @@ export default function Layout(): JSX.Element {
 							/>
 						</li>
 						<li>
-							<HiOutlineShoppingBag className="text-3xl hover:cursor-pointer text-white hover:text-black transition-colors duration-300" />
+							<HiOutlineShoppingCart className="text-3xl hover:cursor-pointer text-white hover:text-black transition-colors duration-300" />
 						</li>
 					</ul>
 				</div>
