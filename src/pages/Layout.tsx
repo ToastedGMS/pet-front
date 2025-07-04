@@ -33,7 +33,10 @@ export default function Layout(): JSX.Element {
 							/>
 						</li>
 						<li>
-							<HiOutlineShoppingCart className="text-3xl text-white hover:text-black transition-colors duration-300 hover:cursor-pointer" />
+							<HiOutlineShoppingCart
+								onClick={() => navigate('/cart')}
+								className="text-3xl text-white hover:text-black transition-colors duration-300 hover:cursor-pointer"
+							/>
 						</li>
 					</ul>
 				</div>
