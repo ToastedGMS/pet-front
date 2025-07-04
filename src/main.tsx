@@ -10,6 +10,7 @@ import Sales from './pages/Sales/Sales.tsx';
 import Services from './pages/Services/Services.tsx';
 import Home from './pages/Home/Home.tsx';
 import { CartProvider } from './context/CartContext.tsx';
+import Cart from './pages/Cart/Cart.tsx';
 
 createRoot(document.getElementById('root')!).render(
 	<CartProvider>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
 						<Route path="/birds" element={<Birds />} />
 						<Route path="/sales" element={<Sales />} />
 						<Route path="/services" element={<Services />} />
+						<Route path="/cart" element={<Cart />} />
 					</Route>
 				</Routes>
 			</StrictMode>
