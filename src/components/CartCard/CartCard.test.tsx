@@ -39,7 +39,7 @@ describe('Cart Card Component', () => {
 		const productCard = screen.getByTestId('product-card');
 		const price = screen.getByRole('paragraph');
 		expect(productCard).toContainElement(price);
-		expect(price.innerHTML).toBe('29.99');
+		expect(price.innerHTML).toBe('R$29.99');
 	});
 	it('renders buttons for adding and removing item quantity', () => {
 		const productCard = screen.getByTestId('product-card');
