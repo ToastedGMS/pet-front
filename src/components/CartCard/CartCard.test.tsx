@@ -11,6 +11,7 @@ describe('Cart Card Component', () => {
 				'Nutritious dry food for adult cats. Rich in protein and vitamins.',
 			price: 29.99,
 			imageUrl: 'https://placehold.co/200x200?text=Cat+Food',
+			quantity: 3,
 		};
 
 		render(
@@ -46,5 +47,10 @@ describe('Cart Card Component', () => {
 		const rmvBtn = screen.getByTestId('rmv-btn');
 		expect(productCard).toContainElement(addBtn);
 		expect(productCard).toContainElement(rmvBtn);
+	});
+	it('displays the correct quantity', () => {
+		const quantity = screen.getByTestId('quantity');
+		expect(quantity).toBeInTheDocument();
+		expect(quantity.textContent).toBe('3');
 	});
 });

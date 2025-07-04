@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
 interface CartCardProps {
-	cartItem: Product;
+	cartItem: Product & { quantity: number };
 }
 
 export default function CartCard({ cartItem }: CartCardProps) {
@@ -17,6 +17,7 @@ export default function CartCard({ cartItem }: CartCardProps) {
 			<button onClick={() => removeItem(cartItem)} data-testid="rmv-btn">
 				<HiOutlineMinus />
 			</button>
+			<span data-testid="quantity">{cartItem.quantity}</span>
 			<button onClick={() => addItem(cartItem)} data-testid="add-btn">
 				<HiOutlinePlus />
 			</button>
