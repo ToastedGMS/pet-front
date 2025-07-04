@@ -28,7 +28,7 @@ const images = [
 	},
 ];
 
-export default function HomeCarrousel(): JSX.Element {
+export default function ImageCarrousel(): JSX.Element {
 	const [index, setIndex] = useState(0);
 
 	useEffect(() => {

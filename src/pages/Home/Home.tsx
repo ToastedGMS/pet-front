@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import HomeCarrousel from '../../components/HomeCarrousel/HomeCarrousel';
+import ImageCarrousel from '../../components/ImageCarrousel/ImageCarrousel';
 import HomeSection from '../../components/HomeSection/HomeSection';
 import CardCarousel from '../../components/CardCarousel/CardCarousel';
 import { servicesProducts } from '../../data/servicesProducts';
@@ -11,7 +11,7 @@ import { catsProducts } from '../../data/catsProducts';
 export default function Home(): JSX.Element {
 	return (
 		<>
-			<HomeCarrousel />
+			<ImageCarrousel />
 			<HomeSection
 				title="Adote um Pet"
 				textContent="Dê um lar para um animal que precisa."

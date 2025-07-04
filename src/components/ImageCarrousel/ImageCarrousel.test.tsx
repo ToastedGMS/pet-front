@@ -1,12 +1,12 @@
 import { screen, render } from '@testing-library/react';
-import HomeCarrousel from './HomeCarrousel';
+import ImageCarrousel from './ImageCarrousel';
 import { MemoryRouter } from 'react-router-dom';
 
-describe('HomeCarrousel', () => {
+describe('ImageCarrousel', () => {
 	beforeEach(() => {
 		render(
 			<MemoryRouter>
-				<HomeCarrousel />
+				<ImageCarrousel />
 			</MemoryRouter>
 		);
 	});
