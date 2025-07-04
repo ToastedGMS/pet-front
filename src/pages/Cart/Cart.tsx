@@ -16,14 +16,39 @@ export default function Cart() {
 	}, {} as Record<string, Product & { quantity: number }>);
 
 	return (
-		<>
-			<h2>Cart</h2>
-			{Object.values(groupedItems).map((item) => (
-				<CartCard cartItem={item} key={item.id} />
-			))}
+		<div className="flex flex-col items-center w-full px-4 py-6">
+			<h2 className="text-2xl font-bold mb-6">Cart</h2>
+			{cartItems && cartItems.length > 0 ? (
+				<div className="flex flex-col w-full max-w-4xl gap-6 mb-6">
+					{Object.values(groupedItems).map((item) => (
+						<CartCard cartItem={item} key={item.id} />
+					))}
+				</div>
+			) : (
+				<p>Its looking really empty here... </p>
+			)}
 
-			<p data-testid="total">{calculateTotal()}</p>
-			<button data-testid="checkout-btn">Checkout</button>
-		</>
+			<div className="w-full max-w-4xl flex justify-between items-center px-4">
+				<p data-testid="total" className="text-xl font-semibold text-ocean">
+					Total: R${calculateTotal().toFixed(2)}
+				</p>
+				{cartItems && cartItems.length > 0 ? (
+					<button
+						data-testid="checkout-btn"
+						className="bg-ocean text-white font-semibold px-6 py-2 rounded-lg hover:bg-darkOcean transition-colors duration-300"
+					>
+						Checkout
+					</button>
+				) : (
+					<button
+						disabled
+						data-testid="checkout-btn"
+						className="bg-ocean opacity-50 text-white font-semibold px-6 py-2 rounded-lg"
+					>
+						Checkout
+					</button>
+				)}
+			</div>
+		</div>
 	);
 }
