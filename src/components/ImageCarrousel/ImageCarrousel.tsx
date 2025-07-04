@@ -1,6 +1,7 @@
 import { useEffect, useState, type JSX } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 const images = [
+	//these will be served by the API later
 	{
 		src: 'https://placehold.co/600x400?text=banner1',
 		alt: 'Banner 1',
