@@ -11,6 +11,7 @@ import Services from './pages/Services/Services.tsx';
 import Home from './pages/Home/Home.tsx';
 import { CartProvider } from './context/CartContext.tsx';
 import Cart from './pages/Cart/Cart.tsx';
+import Error from './pages/Error/Error.tsx';
 
 createRoot(document.getElementById('root')!).render(
 	<CartProvider>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
 						<Route path="/sales" element={<Sales />} />
 						<Route path="/services" element={<Services />} />
 						<Route path="/cart" element={<Cart />} />
+						<Route path="*" element={<Error />} />
 					</Route>
 				</Routes>
 			</StrictMode>
